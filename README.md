@@ -329,7 +329,7 @@ Ardhendu Sekhar Sahoo
 
 Artificial Intelligence Intern
 
-LinkedIn: linkedin.com/in/ardhendu-sahoo/
+LinkedIn: [linkedin.com/in/ardhendu-sahoo/](https://www.linkedin.com/in/ardhendu-sahoo/)
 
 GitHub: https://github.com/Ardhendu-dot/SpamShield-AI
 
