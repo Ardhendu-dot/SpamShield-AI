@@ -118,13 +118,35 @@ Python · Streamlit · scikit-learn · NLTK · pandas · NumPy · Plotly · pick
 
 ---
 
-## 🤝 Contributing
+## 🎓 Internship Information
 
-PRs are welcome. Please open an issue first to discuss substantial changes.
+Project Developed During:
+
+Artificial Intelligence Internship
+
+Organization:
+Codec Technologies Pvt. Ltd.
+
+Duration:
+1 Month Internship Program
+
+Domain:
+Artificial Intelligence & Machine Learning
+
+---
+
+## 👨‍💻 Author
+
+Ardhendu Sekhar Sahoo
+
+Artificial Intelligence Intern
+
+LinkedIn: https://www.linkedin.com/in/ardhendu-sahoo/
+
+GitHub: https://github.com/Ardhendu-dot/SpamShield-AI
 
 ---
 
 ## 📜 License
 
-MIT
-
+This project is intended for educational, learning, and research purposes.
