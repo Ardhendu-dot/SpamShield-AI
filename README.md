@@ -1,129 +1,340 @@
 # 🛡️ SpamShield AI
 
-> **Neural spam, scam & phishing detection — a premium cybersecurity SaaS demo built with Python, Streamlit, scikit-learn and NLP.**
+### AI-Powered Digital Threat Intelligence & Communication Risk Assessment Platform
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.36+-FF4B4B?logo=streamlit&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4-F7931E?logo=scikitlearn&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-5B8CFF)
+SpamShield AI is an Artificial Intelligence and Machine Learning based communication risk analysis platform designed to identify, classify, and explain potential threats hidden within digital communications such as emails, SMS messages, advertisements, promotional content, and online notifications.
 
-SpamShield AI classifies any message as **Spam · Safe · Promotional · Scam · Advertisement**, with confidence scoring, threat level, phishing probability, suspicious-keyword highlighting and cybersecurity recommendations — wrapped in a futuristic dark dashboard.
+Unlike traditional spam detection systems that only classify messages as spam or non-spam, SpamShield AI performs multi-layer threat analysis by combining Machine Learning, Natural Language Processing, phishing detection techniques, suspicious URL analysis, keyword intelligence, and explainable AI reasoning.
 
 ---
 
-## ✨ Features
+## 🚀 Project Overview
 
-- 🧠 **Real-time AI classification** (TF-IDF + Multinomial Naive Bayes, with Logistic Regression comparison)
-- 🔬 **Full NLP pipeline** — lowercase, punctuation strip, stopword removal, stemming, TF-IDF vectorization
-- 📊 **Analytics dashboard** — category distribution, top suspicious keywords, detection timeline, model metrics
-- 🚨 **Threat-level system** — Low · Medium · High · Critical
-- 🔗 **Phishing & URL heuristics** — IP-address URLs, look-alike domains, shortened links
-- 🔥 **Dangerous keyword highlighter**
-- 🗂️ **Detection history** in session, with **CSV / JSON export**
-- 🛡️ **Cyber recommendations** for every verdict
-- 🎨 **Premium dark UI** — glassmorphism, neon gradients, animated metrics
+Digital communication channels are increasingly targeted by phishing attacks, scam campaigns, misleading advertisements, and social engineering techniques. Many of these communications appear legitimate, making it difficult for users to identify potential threats.
+
+SpamShield AI addresses this challenge by providing an intelligent communication risk assessment platform capable of:
+
+* Detecting spam messages
+* Identifying scam attempts
+* Detecting phishing indicators
+* Analyzing suspicious URLs
+* Extracting risky keywords
+* Calculating threat levels
+* Providing AI-generated explanations
+* Generating cybersecurity recommendations
 
 ---
 
-## 🧱 Architecture
+## 🎯 Key Features
 
-```
+### 🔍 Threat Scanner
+
+Real-time analysis of:
+
+* Emails
+* SMS messages
+* Advertisements
+* Promotional content
+* Online notifications
+
+### 🧠 AI-Powered Classification
+
+Classifies messages into:
+
+* Safe
+* Spam
+* Scam
+* Promotional
+* Advertisement
+
+### 🚨 Threat Intelligence Engine
+
+Performs:
+
+* Suspicious keyword detection
+* URL inspection
+* Phishing probability estimation
+* Scam pattern recognition
+* Risk scoring
+
+### 📊 Analytics Dashboard
+
+Provides:
+
+* Category distribution
+* Threat trends
+* Detection timeline
+* Keyword frequency analysis
+* Model performance metrics
+
+### 📁 Detection History
+
+* Stores previous analyses
+* Allows result tracking
+* Supports report exports
+
+### 📈 Explainable AI
+
+Generates:
+
+* Confidence scores
+* Threat levels
+* Prediction reasoning
+* Security recommendations
+
+---
+
+## 🏗️ Project Architecture
+
+```plaintext
 SpamShieldAI/
-├── app.py                  # Streamlit dashboard
-├── train_model.py          # TF-IDF + NB/LR training script
-├── spam_classifier.py      # Prediction API (returns rich JSON report)
+│
+├── app.py
+├── train_model.py
+├── spam_classifier.py
 ├── requirements.txt
 ├── README.md
-├── .streamlit/config.toml  # Dark theme
+│
+├── dataset/
+│   └── spam.csv
+│
 ├── model/
 │   ├── model.pkl
 │   ├── vectorizer.pkl
 │   └── metrics.json
-├── dataset/spam.csv        # Seed dataset (550 rows)
+│
 ├── utils/
-│   ├── preprocessing.py    # Clean / tokenize / stem / keyword & URL heuristics
-│   ├── helpers.py          # Threat-level, tips, safer alternatives
-│   └── visualizations.py   # Plotly charts
+│   ├── preprocessing.py
+│   ├── helpers.py
+│   └── visualizations.py
+│
+├── screenshots/
+│
 └── exported_reports/
 ```
 
-### AI Workflow
+---
 
-```
-   raw message
-      ▼
-  [Preprocessing]  ── lowercase · strip punct · stopwords · stem · token-normalize
-      ▼
-  [TF-IDF (1-2 grams, 5k features)]
-      ▼
-  [Naive Bayes  /  Logistic Regression] ── best by F1
-      ▼
-  [Threat scoring] ── phishing prob · URL heuristics · keyword flags
-      ▼
-   JSON report ─→ Streamlit UI
-```
+## ⚙️ Technology Stack
+
+### Programming Language
+
+* Python
+
+### Machine Learning
+
+* Scikit-learn
+* Multinomial Naive Bayes
+* Logistic Regression
+
+### Natural Language Processing
+
+* NLTK
+* TF-IDF Vectorization
+
+### Data Processing
+
+* Pandas
+* NumPy
+
+### Visualization
+
+* Plotly
+
+### Frontend
+
+* Streamlit
+
+### Model Serialization
+
+* Pickle
 
 ---
 
-## 🚀 Quick start
+## 🔄 Workflow
+
+### Step 1: User Input
+
+User submits:
+
+* Email
+* SMS
+* Advertisement
+* Promotional Message
+
+### Step 2: Preprocessing
+
+Text undergoes:
+
+* Lowercasing
+* Cleaning
+* Tokenization
+* Stopword Removal
+* Feature Preparation
+
+### Step 3: Feature Extraction
+
+TF-IDF Vectorization converts text into numerical representations.
+
+### Step 4: Machine Learning Inference
+
+The trained model analyzes:
+
+* Content patterns
+* Spam indicators
+* Threat indicators
+
+### Step 5: Threat Intelligence Layer
+
+Performs:
+
+* Keyword Analysis
+* URL Inspection
+* Scam Detection
+* Phishing Analysis
+
+### Step 6: Output Generation
+
+Produces:
+
+* Category Prediction
+* Confidence Score
+* Threat Level
+* Phishing Probability
+* AI Reasoning
+* Security Recommendations
+
+---
+
+## 📸 Project Screenshots
+
+Add screenshots here:
+
+### Command Center Dashboard
+
+### Threat Scanner
+
+### Analytics Dashboard
+
+### Detection History
+
+---
+
+## 📊 Machine Learning Pipeline
+
+Dataset
+↓
+Preprocessing
+↓
+TF-IDF Vectorization
+↓
+Model Training
+↓
+Model Evaluation
+↓
+Threat Analysis
+↓
+Prediction
+↓
+Visualization
+
+---
+
+## 🧪 Performance Metrics
+
+Models Evaluated:
+
+* Multinomial Naive Bayes
+* Logistic Regression
+
+Evaluation Metrics:
+
+* Accuracy Score
+* Precision
+* Recall
+* F1 Score
+* Confusion Matrix
+
+Best Performing Model is automatically selected and deployed.
+
+---
+
+## ▶️ Installation & Setup
+
+Clone Repository
 
 ```bash
-git clone https://github.com/your-username/SpamShieldAI.git
+git clone https://github.com/yourusername/SpamShieldAI.git
+```
+
+Navigate to Project
+
+```bash
 cd SpamShieldAI
+```
+
+Install Dependencies
+
+```bash
 pip install -r requirements.txt
-python train_model.py        # builds model/model.pkl + vectorizer.pkl
+```
+
+Train Model
+
+```bash
+python train_model.py
+```
+
+Run Application
+
+```bash
 streamlit run app.py
 ```
 
-The app opens at `http://localhost:8501`.
+---
+
+## 🌟 Future Enhancements
+
+* Transformer-based NLP Models
+* BERT Integration
+* Multi-language Threat Detection
+* Voice Input Analysis
+* Cloud Deployment
+* Real-time Email Monitoring
+* Browser Extension
+* Advanced Threat Intelligence Integration
 
 ---
 
-## ☁️ Deployment
+## 🎓 Internship Information
 
-### Streamlit Community Cloud
-1. Push this repo to GitHub.
-2. Go to [share.streamlit.io](https://share.streamlit.io) → **New app**.
-3. Pick the repo, set `app.py` as the entrypoint.
+Project Developed During:
 
-### Hugging Face Spaces
-1. Create a new Space → SDK: **Streamlit**.
-2. Push this repo to the Space.
+Artificial Intelligence Internship
 
-### Render
-1. New → **Web Service**, connect repo.
-2. Build: `pip install -r requirements.txt && python train_model.py`
-3. Start: `streamlit run app.py --server.port=$PORT --server.address=0.0.0.0`
+Organization:
+Codec Technologies Pvt. Ltd.
 
-### Replit
-1. Import repo.
-2. `.replit` run command: `bash -c "pip install -r requirements.txt && python train_model.py && streamlit run app.py --server.port=8080 --server.address=0.0.0.0"`
+Duration:
+1 Month Internship Program
+
+Domain:
+Artificial Intelligence & Machine Learning
 
 ---
 
-## 🛠️ Tech stack
+## 👨‍💻 Author
 
-Python · Streamlit · scikit-learn · NLTK · pandas · NumPy · Plotly · pickle · fpdf2
+Ardhendu Sekhar Sahoo
 
----
+Artificial Intelligence Intern
 
-## 🧭 Future improvements
+LinkedIn: linkedin.com/in/ardhendu-sahoo/
 
-- Transformer-based classifier (DistilBERT) alongside the NB baseline
-- Multilingual detection (XLM-R)
-- Voice input via `streamlit-mic-recorder`
-- AI chatbot assistant for explaining verdicts
-- Persistent storage (SQLite / Supabase)
-- Browser extension / Gmail plug-in
-
----
-
-## 🤝 Contributing
-
-PRs are welcome. Please open an issue first to discuss substantial changes.
+GitHub: https://github.com/Ardhendu-dot/SpamShield-AI
 
 ---
 
 ## 📜 License
 
-MIT
+This project is intended for educational, learning, and research purposes.
